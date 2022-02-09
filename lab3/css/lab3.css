@@ -1,0 +1,19 @@
+body {
+  font-family: Helvetica, Arial, "san serif";
+  color: powderblue;
+  padding: 25px;
+  font-size: 120%;
+  width: 80%;
+  margin: 10px;
+  padding: 70px;
+  background-color: black;
+  border: outset 10px #123405;
+  border-color: powderblue;
+  height: 270vh;
+
+}
+
+h1 {
+  font-family: Helvetica, Arial, "san serif";
+  font-style: oblique;
+}
