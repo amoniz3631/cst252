@@ -1,36 +1,31 @@
-/**
- * Author: Sara Christensen and Ari Moniz
- * Created:   2.21.22
- **/
 
-      function sortUserName() {
-        // declare a variable userName and use window.prompt()
-            var userName = window.prompt("Enter your name");
-            console.log("userName = ", userName);
-        // Sort the letters of the user's name and return those from the function
-        // split string into array
-            var nameArray = userName.split('');
-            console.log("nameArray = ", nameArray);
-        // sort array
-            var nameArraySort = nameArray.sort();
-            console.log("nameArraySort = ", nameArraySort);
-        // convert array back to string
-            var nameSorted = nameArraySort.join('');
-            console.log("nameSorted = ", nameSorted);
-        // return sorted string
-            return nameSorted;
-  }
+            // define array
+          array = [7, 70, 17, 777, 7000, 71, 77];
+          console.log("My array ", array);
 
-        // sorting capital letters together
-        // https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
-function sortCapLetters(str) {
-  return str.replace(
-    /\w\S*/g,
-    function(txt) {
-      return txt.charAt(0).sortCapLetters() + txt.substr(1).toLowerCase();
-    }
-  );
-}
+           // named function
+            function addTwo(x){
+                return x + 2;
+            }
 
-      // call the function and output the results with document.write()
-    document.writeln("Your new name is: ", sortUserName());
+            // test results
+            console.log("What's 5 + 2? " + addTwo(5));
+            console.log("What's 2220 + 2? " + addTwo(2220));
+
+          // apply .map to array and function
+          var result = array.map(addTwo);
+
+          // test
+          console.log("Add two to the array: ", result);
+
+          // new anon function
+          var result =  array.map(function(x){
+                return x/2;
+            })
+          // test
+          console.log("Divide the array by two: ", result);
+
+          var sortedNumbers = array.sort(function(a, b) {
+                	return a-b;
+            	});
+          console.log("Sorted Array: ", sortedNumbers);

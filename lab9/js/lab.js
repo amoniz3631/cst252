@@ -1,36 +1,39 @@
 /**
  * Author: Sara Christensen and Ari Moniz
- * Created:   2.21.22
- **/
+  * Created:   2.28.2022
+  **/
 
-      function sortUserName() {
-        // declare a variable userName and use window.prompt()
-            var userName = window.prompt("Enter your name");
-            console.log("userName = ", userName);
-        // Sort the letters of the user's name and return those from the function
-        // split string into array
-            var nameArray = userName.split('');
-            console.log("nameArray = ", nameArray);
-        // sort array
-            var nameArraySort = nameArray.sort();
-            console.log("nameArraySort = ", nameArraySort);
-        // convert array back to string
-            var nameSorted = nameArraySort.join('');
-            console.log("nameSorted = ", nameSorted);
-        // return sorted string
-            return nameSorted;
-  }
+             // find element & assign element variable
+             var outputEl = document.getElementById("output");
 
-        // sorting capital letters together
-        // https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
-function sortCapLetters(str) {
-  return str.replace(
-    /\w\S*/g,
-    function(txt) {
-      return txt.charAt(0).sortCapLetters() + txt.substr(1).toLowerCase();
-    }
-  );
-}
+             // create two new elements then append and style new elements
 
-      // call the function and output the results with document.write()
-    document.writeln("Your new name is: ", sortUserName());
+             var oneEl = document.createElement("button");
+             oneEl.innerHTML = "Exit the Matrix";
+             oneEl.style.backgroundColor = "red";
+             oneEl.style.color = "white";
+             oneEl.style.margin = "7px";
+             outputEl.appendChild(oneEl);
+             console.log("Button 1 " + oneEl);
+
+             var twoEl = document.createElement("button");
+             twoEl.innerHTML = "Stay in the Matrix";
+             twoEl.style.backgroundColor = "blue";
+             twoEl.style.color = "white";
+             twoEl.style.margin = "7px";
+             outputEl.appendChild(twoEl);
+             console.log("Button 2 " + twoEl);
+
+             // Task x https://www.w3schools.com/jsref/met_document_createattribute.asp
+                 function newAttribute() {
+                 // Create a class attribute:
+                 const att = document.createAttribute("style");
+
+                 // Set a value of the class attribute
+                 att.value = "color: green";
+
+                 // Add the class attribute to the first h1;
+                 document.getElementsByTagName("h1")[0].setAttributeNode(att);
+                 }
+
+                 console.log(newAttribute);
