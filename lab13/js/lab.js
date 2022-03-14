@@ -17,11 +17,13 @@ function sortingHat(name) {
   return houseStr;
 }
 
-$("#my-button").click(function(){
+$("#button").click(function(){
   // need id input in html
   var name = $("#input").val();
   var house = sortingHat(name);
   console.log(house);
   // need id output in html
   $("#output").html(house);
+  var newText = "The Sorting Hat has sorted you into " + house;
+    document.getElementById("output").innerHTML = newText;
 })
