@@ -1,36 +1,22 @@
 /**
- * Author: Sara Christensen and Ari Moniz
- * Created:   2.21.22
+ * Author:    Sara Christensen & Ari Moniz
+ * Created:   3.2.2022
  **/
 
-      function sortUserName() {
-        // declare a variable userName and use window.prompt()
-            var userName = window.prompt("Enter your name");
-            console.log("userName = ", userName);
-        // Sort the letters of the user's name and return those from the function
-        // split string into array
-            var nameArray = userName.split('');
-            console.log("nameArray = ", nameArray);
-        // sort array
-            var nameArraySort = nameArray.sort();
-            console.log("nameArraySort = ", nameArraySort);
-        // convert array back to string
-            var nameSorted = nameArraySort.join('');
-            console.log("nameSorted = ", nameSorted);
-        // return sorted string
-            return nameSorted;
-  }
 
-        // sorting capital letters together
-        // https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
-function sortCapLetters(str) {
-  return str.replace(
-    /\w\S*/g,
-    function(txt) {
-      return txt.charAt(0).sortCapLetters() + txt.substr(1).toLowerCase();
-    }
-  );
-}
+       // Create a <button> element (in jQuery, NOT In your HTML).&  Give it a text label
+       // Add it to your output div
+          $("#output").append("<button id=my-button>Press Me");
 
-      // call the function and output the results with document.write()
-    document.writeln("Your new name is: ", sortUserName());
+      // Add a click event to it that will bring up an alert
+          $("#my-button").click(function(){
+            alert("Follow this link to listen to my favorite song right now! https://www.youtube.com/watch?v=cNwy1Th4NYo")
+          });
+
+      // Restyle the button with jQuery so it is a pleasant green.
+          $("#my-button").css("background-color", "lightgreen");
+
+      // Task X
+          $("#subject-button").click(function(){
+            $("#subject").toggleClass("green")
+          })
