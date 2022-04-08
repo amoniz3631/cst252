@@ -1,29 +1,31 @@
-function sortingHat(name) {
-  // get length of name
-  var len = name.length;
-  // do a mod 4 to get house
-  var mod = len % 4;
-  //if conditional to set houseStr to houseStr
-  if (mod == 0) {
-    houseStr = "Ravenclaw";
-  } else if (mod == 1){
-    houseStr = "Slytherin";
-  } else if (mod == 2){
-    houseStr = "Hufflepuff";
-  } else if (mod == 3){
-    houseStr = "Gryffindor";
-  }
-  //return house txt
-  return houseStr;
-}
+//  Loop through numbers 1 to 200, listing them as you go
+ for (i=1; i <= 200; i++) {
+// Define and declare string
+   var buildStr = "";
+// If the number is a multiple of 3, if should print "Fizz!"
+   if (i % 3 == 0){
+     buildStr += "Fizz";
+   }
+// If the number is a multiple of 5, it should print "Buzz!"
+   if (i % 5 == 0){
+     buildStr += "Buzz";
+   }
+// If the number is a multiple of 7, it should print "Boom!"
+   if (i % 7 == 0){
+     buildStr += "Boom";
+   }
 
-$("#button").click(function(){
-  // need id input in html
-  var name = $("#input").val();
-  var house = sortingHat(name);
-  console.log(house);
-  // need id output in html
-  $("#output").html(house);
-  var newText = "The Sorting Hat has sorted you into " + house;
-    document.getElementById("output").innerHTML = newText;
-})
+   else {
+           console.log(i);
+       }
+
+// append output to div
+   if (buildStr != "") {
+    console.log(buildStr + "!");
+    $("#output").append("<p>" + buildStr + "!");
+    }
+    else {
+        console.log(i);
+        $("#output").append("<p>" + i);
+    }
+    }
