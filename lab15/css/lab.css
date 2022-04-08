@@ -34,10 +34,7 @@ h3 {
 }
 
 .title {
-  max-width: 100%;
-  font-size: 285%;
-  letter-spacing: 2px;
-  text-align: center;
+  font-weight: bold;
 }
 
 .col img {
@@ -85,4 +82,8 @@ a:hover {
     .summary {
       column-count: 1;
     }
+}
+
+button {
+  margin: 10px;
 }
